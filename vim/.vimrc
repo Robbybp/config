@@ -13,3 +13,5 @@ set nowrap
 colorscheme industry
 
 let g:tex_flavor="latex"
+let g:julia_indent_align_brackets=0
+let g:julia_indent_align_funcargs=0
