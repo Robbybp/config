@@ -1,0 +1,2 @@
+# TODO: I'd like this prompt to contain the full working path
+export PROMPT="%B%F{10}%n@%m %1~ %# %F{White}%b"

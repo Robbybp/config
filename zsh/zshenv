@@ -1,0 +1,2 @@
+export PATH=$PATH:$HOME/.idaes/bin
+# TODO: Add paths to licensed software, i.e. Knitro, ALAMO
