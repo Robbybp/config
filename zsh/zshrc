@@ -1,2 +1,11 @@
 # TODO: I'd like this prompt to contain the full working path
 export PROMPT="%B%F{10}%n@%m %1~ %# %F{White}%b"
+
+alias gst="git status"
+alias gb="git branch"
+alias ga="git add"
+alias gp="git pull"
+alias gps="git push"
+alias gm="git merge"
+alias gcm="git commit -m"
+alias gd="git diff"
