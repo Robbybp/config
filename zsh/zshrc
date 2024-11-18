@@ -1,5 +1,8 @@
 # TODO: I'd like this prompt to contain the full working path
 export PROMPT="%B%F{10}%n@%m %1~ %# %F{White}%b"
+export GRB_LICENSE_FILE="$HOME/path/to/gurobi.lic"
+
+# NOTE: Some juliaup-managed content goes here! 
 
 alias gst="git status"
 alias gb="git branch"
@@ -10,3 +13,5 @@ alias gm="git merge"
 alias gcm="git commit -m"
 alias gd="git diff"
 alias gch="git checkout"
+
+alias grep="grep --color"
