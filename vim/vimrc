@@ -15,3 +15,11 @@ colorscheme industry
 let g:tex_flavor="latex"
 let g:julia_indent_align_brackets=0
 let g:julia_indent_align_funcargs=0
+
+" Allow 'bracketed paste mode' when in Tmux/Screen
+if &term =~ "screen"                                                   
+    let &t_BE = "\e[?2004h"                                              
+    let &t_BD = "\e[?2004l"                                              
+    let &t_PS="\e[200~"                                              
+    let &t_PE="\e[201~"                                              
+endif
