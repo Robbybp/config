@@ -12,3 +12,19 @@ To do this:
 This creates a new .zshrc file and backs up my original.
 2. Merge the two files together.
 3. Make sure `gitfast` is loaded as the only plugin.
+
+### ZSH autosuggestions and syntax highlighting
+
+These useful extensions can be installed independently of oh-my-zsh:
+- https://github.com/zsh-users/zsh-autosuggestions
+- https://github.com/zsh-users/zsh-syntax-highlighting
+
+These can be cloned into `$HOME/.zsh` then sourced in `.zshrc` directly,
+or cloned into `$HOME/.oh-my-zsh/plugins` then loaded by OMZ, e.g.
+```zsh
+plugins=(
+    gitfast
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
+```
