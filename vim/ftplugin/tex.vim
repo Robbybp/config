@@ -9,3 +9,4 @@ let g:Tex_SectionMaps=0
 " trivlist+F5 with ETL, but that is okay for now as I never use trivlist.
 " A longer term solution is to switch to vimtex...
 let g:Tex_Env_trivlist="ETL"
+let g:Tex_Env_subequations="ESE"
