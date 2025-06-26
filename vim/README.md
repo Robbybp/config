@@ -15,7 +15,7 @@ patch ~/.vim/pack/plugins/start/julia-vim/indent/julia.vim ~/config/vim/indent/j
 
 ## Python
 
-Graph the indent file from
+Grab the indent file from
 [this repo](https://github.com/jeetsukumaran/vim-python-indent-black/tree/main/indent)
 and copy it to `~/.vim/indent/python.vim`.
 
