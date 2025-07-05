@@ -5,6 +5,7 @@
 1. Get vim-like process suspension to access parent terminal
    (i.e., don't use neovim's terminal emulator).
 2. 4-space indent for Julia function declaration arguments.
+   (I can fix this by applying the same patch to the julia.vim indent file.)
 3. Avoid auto-highlighting before I press enter.
    (Can disable this with `set nohlsearch` and `set noincsearch`.)
 4. Block-red highlighting for misspelled words (I like the red+underline better).
@@ -17,3 +18,10 @@
 
 1. Backspace deletes a 4-space indent when editing Julia.
 2. I can use the MacOS-default color scheme when in Tmux.
+
+### "Killer apps" of NeoVim
+
+- Jump-to-definition
+- More complicated autocomplete (entire line or code block)
+- Syntax/error highlighting
+- Fuzzy file finder (I spend an embarrassing amount of time in `sp <TAB>`)
