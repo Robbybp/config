@@ -11,12 +11,23 @@ set nowrap
 set spell
 set noincsearch
 set nohlsearch
+set guicursor n-v-sm-i:block
 
 colorscheme industry
 
 " Colorscheme-independent spellcheck highlighting
 hi clear SpellBad
 hi SpellBad cterm=underline ctermfg=196
+
+" Persistent undo memory
+if !isdirectory($HOME."/.vim")
+    call mkdir($HOME."/.vim", "", 0770)
+endif
+if !isdirectory($HOME."/.vim/undo")
+    call mkdir($HOME."/.vim/undo", "", 0700)
+endif
+set undofile
+set undodir=~/.vim/undo
 
 let g:tex_flavor="latex"
 let g:julia_indent_align_brackets=0
