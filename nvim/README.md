@@ -25,3 +25,4 @@
 - More complicated autocomplete (entire line or code block)
 - Syntax/error highlighting
 - Fuzzy file finder (I spend an embarrassing amount of time in `sp <TAB>`)
+- Git diff as +/-/~ in the sign column (maybe this is possible in vim as well?)
