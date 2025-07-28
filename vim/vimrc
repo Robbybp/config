@@ -11,7 +11,8 @@ set nowrap
 set spell
 set noincsearch
 set nohlsearch
-set guicursor n-v-sm-i:block
+" This is what I use in neovim, but it doesn't work in vim?
+"set guicursor n-v-sm-i:block
 
 colorscheme industry
 
@@ -28,6 +29,8 @@ if !isdirectory($HOME."/.vim/undo")
 endif
 set undofile
 set undodir=~/.vim/undo
+
+let g:netrw_bufsettings="noma nomod nu nobl nowrap ro rnu"
 
 let g:tex_flavor="latex"
 let g:julia_indent_align_brackets=0
