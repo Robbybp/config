@@ -7,6 +7,9 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = false
 
+-- Settings for netrw directory explorer
+vim.g.netrw_bufsettings = 'noma nomod nu nobl nowrap ro rnu'
+
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
@@ -615,7 +618,7 @@ require('lazy').setup({
         clangd = {},
         -- gopls = {},
         pyright = {},
-        -- julials = {},
+        julials = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
