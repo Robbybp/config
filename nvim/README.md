@@ -6,6 +6,9 @@
    (i.e., don't use neovim's terminal emulator).
 2. 4-space indent for Julia function declaration arguments.
    (I can fix this by applying the same patch to the julia.vim indent file.)
+   Actually, this was a bit more complicated. I think treesitter was interfering
+   with Julia indentation. Once I disable treesitter indentation for Julia
+   and install the Julia-vim plugin, my Julia indentation is good.
 3. Avoid auto-highlighting before I press enter.
    (Can disable this with `set nohlsearch` and `set noincsearch`.)
 4. Block-red highlighting for misspelled words (I like the red+underline better).
@@ -16,6 +19,8 @@
 8. Bad Python indentation in function arguments (if parens are not closed, I get
    an extra indent)
 9. \<C-n\> doesn't bring up an autocomplete menu...
+   I can fix this by disabling the autocomplete plugin used by kickstart.
+10. No highlighting in CSV
 
 ### Things that work better about neovim
 
