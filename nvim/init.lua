@@ -66,3 +66,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 vim.pack.add({'https://github.com/JuliaEditorSupport/julia-vim'})
+vim.pack.add({'https://github.com/nvim-lua/plenary.nvim'})
+vim.pack.add({
+    { src = 'https://github.com/nvim-telescope/telescope.nvim' },
+})
+
+builtin = require 'telescope.builtin'
+vim.keymap.set('n', '<leader>sf', builtin.find_files, {})
+vim.keymap.set('n', '<leader>sg', builtin.live_grep, {})
