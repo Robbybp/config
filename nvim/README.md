@@ -50,8 +50,18 @@
     -- ft = 'julia',
   }
 ```
+With built-in plugin management in Neovim 12+:
+```lua
+vim.pack.add({'https://github.com/JuliaEditorSupport/julia-vim'})
+```
 
 2. Apply the patch file to give function arguments a 4-space indent:
 ```
 patch ~/.local/share/nvim/lazy/julia-vim/indent/julia.vim ~/config/vim/indent/julia.vim.patch
 ```
+with built-in plugin management in Neovim 12+:
+```
+patch ~/.local/share/nvim/site/pack/core/opt/julia-vim ~/config/vim/indent/julia.vim.patch
+```
+
+3. Move the `after/ftplugin/julia.lua` file into the `~/.config/nvim` directory.
