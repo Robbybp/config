@@ -36,3 +36,22 @@
 - Fuzzy file finder (I spend an embarrassing amount of time in `sp <TAB>`)
   (although I can get a lot out of just doing `sp .` first)
 - Git diff as +/-/~ in the sign column (maybe this is possible in vim as well?)
+
+# Installation
+
+## Julia
+
+1. Install Julia-LS. E.g., with Lazy:
+```lua
+  {
+    'JuliaEditorSupport/julia-vim',
+    -- We need to always load this plugin because LatexToUnicode is available from other
+    -- function types? Something like that...
+    -- ft = 'julia',
+  }
+```
+
+2. Apply the patch file to give function arguments a 4-space indent:
+```
+patch ~/.local/share/nvim/lazy/julia-vim/indent/julia.vim ~/config/vim/indent/julia.vim.patch
+```
