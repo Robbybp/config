@@ -41,7 +41,7 @@
 
 ## Julia
 
-1. Install Julia-LS. E.g., with Lazy:
+1. Install Julia-vim. E.g., with Lazy:
 ```lua
   {
     'JuliaEditorSupport/julia-vim',
