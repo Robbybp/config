@@ -65,3 +65,9 @@ patch ~/.local/share/nvim/site/pack/core/opt/julia-vim ~/config/vim/indent/julia
 ```
 
 3. Move the `after/ftplugin/julia.lua` file into the `~/.config/nvim` directory.
+
+## Python
+
+Grab the indent file from
+[this repo](https://github.com/jeetsukumaran/vim-python-indent-black/tree/main/indent)
+and copy it to `~/.config/nvim/indent/python.vim`.
