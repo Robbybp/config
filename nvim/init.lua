@@ -70,7 +70,13 @@ vim.pack.add({'https://github.com/nvim-lua/plenary.nvim'})
 vim.pack.add({
     { src = 'https://github.com/nvim-telescope/telescope.nvim' },
 })
+vim.pack.add({'https://github.com/neovim/nvim-lspconfig'})
 
 builtin = require 'telescope.builtin'
 vim.keymap.set('n', '<leader>sf', builtin.find_files, {})
 vim.keymap.set('n', '<leader>sg', builtin.live_grep, {})
+
+-- TODO: config matlab_ls
+
+vim.lsp.enable('lua_ls')
+vim.lsp.enable('matlab_ls')
