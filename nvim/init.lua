@@ -35,9 +35,11 @@ vim.cmd.colorscheme 'industry'
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
--- vim.schedule(function()
---   vim.o.clipboard = 'unnamedplus'
--- end)
+--  This syncs all yanks to system clipboard. I can presumably still yank to
+--  the system clipboard with "*y
+--vim.schedule(function()
+--  vim.o.clipboard = 'unnamedplus'
+--end)
 
 -- This is nice
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -71,12 +73,22 @@ vim.pack.add({
     { src = 'https://github.com/nvim-telescope/telescope.nvim' },
 })
 vim.pack.add({'https://github.com/neovim/nvim-lspconfig'})
+vim.pack.add({'https://github.com/vim-latex/vim-latex'})
 
 builtin = require 'telescope.builtin'
 vim.keymap.set('n', '<leader>sf', builtin.find_files, {})
 vim.keymap.set('n', '<leader>sg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>sd', function()
+    builtin.find_files({find_command = { 'find', '.', '-type', 'd' }})
+end, {})
 
 -- TODO: config matlab_ls
+--vim.lsp.config('matlab_ls', {
+--    cmd = {
+--    matlab = {
+--        installPath = '/Applications/MATLAB_R2025a.app/bin',
+--    },
+--})
 
 vim.lsp.enable('lua_ls')
-vim.lsp.enable('matlab_ls')
+--vim.lsp.enable('matlab_ls')
