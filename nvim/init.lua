@@ -60,26 +60,41 @@ vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 -- Highlight when yanking (copying) text
 --  See `:help vim.hl.on_yank()`
 vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-  callback = function()
-    vim.hl.on_yank()
-  end,
+    desc = 'Highlight when yanking (copying) text',
+    group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+    callback = function()
+        vim.hl.on_yank()
+    end,
 })
 
-vim.pack.add({'https://github.com/JuliaEditorSupport/julia-vim'})
-vim.pack.add({'https://github.com/nvim-lua/plenary.nvim'})
+-- Faster write
+vim.keymap.set('n', '<leader>w', ':write<CR>')
+
+vim.pack.add({ 'https://github.com/JuliaEditorSupport/julia-vim' })
+vim.pack.add({ 'https://github.com/nvim-lua/plenary.nvim' })
 vim.pack.add({
     { src = 'https://github.com/nvim-telescope/telescope.nvim' },
 })
-vim.pack.add({'https://github.com/neovim/nvim-lspconfig'})
-vim.pack.add({'https://github.com/vim-latex/vim-latex'})
+vim.pack.add({ 'https://github.com/neovim/nvim-lspconfig' })
+vim.pack.add({ 'https://github.com/vim-latex/vim-latex' })
+vim.pack.add({
+    { src = 'https://github.com/lewis6991/gitsigns.nvim' },
+})
+require('gitsigns').setup {
+    signs = {
+        add = { text = '+' },
+        change = { text = '~' },
+        delete = { text = '_' },
+        topdelete = { text = '‾' },
+        changedelete = { text = '~' },
+    },
+}
 
 builtin = require 'telescope.builtin'
 vim.keymap.set('n', '<leader>sf', builtin.find_files, {})
 vim.keymap.set('n', '<leader>sg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>sd', function()
-    builtin.find_files({find_command = { 'find', '.', '-type', 'd' }})
+    builtin.find_files({ find_command = { 'find', '.', '-type', 'd' } })
 end, {})
 
 -- TODO: config matlab_ls
@@ -90,5 +105,9 @@ end, {})
 --    },
 --})
 
+vim.diagnostic.config({ signs = false })
 vim.lsp.enable('lua_ls')
+vim.lsp.enable('ruff')
 --vim.lsp.enable('matlab_ls')
+
+vim.keymap.set('n', '<leader>f', vim.lsp.buf.format)
