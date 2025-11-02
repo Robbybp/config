@@ -66,8 +66,41 @@ patch ~/.local/share/nvim/site/pack/core/opt/julia-vim ~/config/vim/indent/julia
 
 3. Move the `after/ftplugin/julia.lua` file into the `~/.config/nvim` directory.
 
+### Julia LSP
+```lua
+vim.lsp.enable('julials')
+```
+
+Setup a global environment to use for the language server:
+```sh
+julia --project=@nvim-lspconfig -e 'import Pkg; Pkg.add("LanguageServer")'
+```
+
+Test that the language server works:
+```julia
+import LanguageServer
+runserver()
+```
+
+Check that the server is running when editing a Julia file with:
+```vim
+:LspInfo
+```
+
 ## Python
 
 Grab the indent file from
 [this repo](https://github.com/jeetsukumaran/vim-python-indent-black/tree/main/indent)
 and copy it to `~/.config/nvim/indent/python.vim`.
+
+### Python LSP
+```sh
+brew install ruff
+```
+```lua
+vim.lsp.enable('ruff')
+```
+Check that the server is running when editing a Python file with:
+```vim
+:LspInfo
+```
