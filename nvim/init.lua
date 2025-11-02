@@ -119,3 +119,5 @@ vim.lsp.enable('julials')
 --vim.lsp.enable('matlab_ls')
 
 vim.keymap.set('n', '<leader>f', vim.lsp.buf.format)
+
+vim.cmd('set completeopt+=noselect')
