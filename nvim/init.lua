@@ -44,11 +44,11 @@ vim.cmd.colorscheme 'industry'
 -- This is nice
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
-vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
-  pattern = "*.tex",
-  callback = function()
-    vim.bo.filetype = "tex"
-  end,
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+    pattern = "*.tex",
+    callback = function()
+        vim.bo.filetype = "tex"
+    end,
 })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
