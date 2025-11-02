@@ -115,6 +115,7 @@ end, {})
 vim.diagnostic.config({ signs = false })
 vim.lsp.enable('lua_ls')
 vim.lsp.enable('ruff')
+vim.lsp.enable('julials')
 --vim.lsp.enable('matlab_ls')
 
 vim.keymap.set('n', '<leader>f', vim.lsp.buf.format)
