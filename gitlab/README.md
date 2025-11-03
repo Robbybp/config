@@ -1,3 +1,9 @@
+## Authenticating with SSH
+See the docs [here](https://docs.gitlab.com/user/ssh/) to see how to
+authenticate with `ssh`.
+
+## Verifying authenticity
+
 When connecting to a gitlab instance for the first time, we get the
 message "unable to verify authenticity of host". To verify authenticity,
 find the host's SSH fingerprint at the following page:
