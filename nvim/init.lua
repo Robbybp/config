@@ -44,6 +44,16 @@ vim.cmd.colorscheme 'industry'
 -- This is nice
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+vim.keymap.set('i', '<Tab>', function()
+    local col = vim.fn.col(".")
+    local line = vim.fn.getline(".")
+    if col > 1 and (line:sub(col - 1, col - 1) == "-" or line:sub(col - 1, col - 1) == "=") then
+        return ">"
+    else
+        return "<Tab>"
+    end
+end, { expr = true })
+
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     pattern = "*.tex",
     callback = function()
