@@ -61,7 +61,7 @@ patch ~/.local/share/nvim/lazy/julia-vim/indent/julia.vim ~/config/vim/indent/ju
 ```
 with built-in plugin management in Neovim 12+:
 ```
-patch ~/.local/share/nvim/site/pack/core/opt/julia-vim ~/config/vim/indent/julia.vim.patch
+patch ~/.local/share/nvim/site/pack/core/opt/julia-vim/indent/julia.vim ~/config/vim/indent/julia.vim.patch
 ```
 
 3. Move the `after/ftplugin/julia.lua` file into the `~/.config/nvim` directory.
